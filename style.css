@@ -8,3 +8,9 @@ h1{
   border-width: 3px;
   background-color: lightblue;
 }
+
+#navbar a{
+  color: orange;
+  text-decoration: none;
+  padding: 15px;
+}
