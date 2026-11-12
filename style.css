@@ -17,6 +17,12 @@ h1{
   padding: 15px;
 }
 
+#navbar a:hover{
+  background-color: beige;
+  color: red;
+  text-decoration: underline;
+}
+
 #card{
   border-style: solid;
   border-color: black;
@@ -42,6 +48,9 @@ body{
   margin-bottom: 20px;
   width: 70%;
   padding: 10px;
+  border-radius: 20px;
+
+  /* cursor: pointer; */
 }
 
 
