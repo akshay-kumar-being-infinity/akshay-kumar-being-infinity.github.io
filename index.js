@@ -1,25 +1,5 @@
 console.log("Hello world");
 
-//homework 1
-
-// var
-// const
-// let
-
-//hw2
-
-//json - javascript object notation.
-// var user = {
-//     "key" : "value",
-//     "name" : "Akshay Kumar",
-//     "gender" : "male"
-// }
-
-// user.name = "Akshay Kumar"
-// user.gender
-
-
-
 var users = [
     {
         "name" : "John Doe",
@@ -67,5 +47,20 @@ function randomUser(){
             userName.innerHTML = data.results[0].name.first + " " + data.results[0].name.last;
             userGender.innerHTML = data.results[0].gender;
             userImage.src = data.results[0].picture.large;
+        })
+}
+
+function myRandomUser(){
+    
+    fetch("http://localhost:8080/api/users/randomuser")
+        .then(res => res.json())
+        .then(data => {
+            var userName = document.getElementById("user-name");
+            var userGender = document.getElementById("user-gender");
+            var userImage = document.getElementById("user-image");
+
+            userName.innerHTML = data.name;
+            userGender.innerHTML = data.gender;
+            userImage.src = data.image;
         })
 }
