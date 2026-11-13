@@ -1,25 +1,5 @@
 console.log("Hello world");
 
-//homework 1
-
-// var
-// const
-// let
-
-//hw2
-
-//json - javascript object notation.
-// var user = {
-//     "key" : "value",
-//     "name" : "Akshay Kumar",
-//     "gender" : "male"
-// }
-
-// user.name = "Akshay Kumar"
-// user.gender
-
-
-
 var users = [
     {
         "name" : "John Doe",
@@ -35,10 +15,6 @@ var users = [
 
 var id = 0;
 
-//hw3
-
-//DOM Manipulation - Document Object Model. 
-
 function toggleUser(){
     var userName = document.getElementById("user-name");
     var userGender = document.getElementById("user-gender");
@@ -53,11 +29,8 @@ function toggleUser(){
 
 function randomUser(){
 
-    //hw4 - fetch
-
     fetch("https://randomuser.me/api")
 
-        //hw5 - arrow function
         .then(res => res.json())
         .then(data => {
             var userName = document.getElementById("user-name");
