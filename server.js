@@ -1,6 +1,11 @@
 var express = require("express");
 var app = express();
-var port = 8080;
+var port = process.env.PORT || 8080;
+
+var swaggerUi = require("swagger-ui-express");
+var swaggerDocument = require("./swagger-output.json");
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use(express.json());
 app.use(express.static(__dirname));
