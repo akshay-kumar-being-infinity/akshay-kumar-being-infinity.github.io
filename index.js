@@ -42,3 +42,18 @@ function randomUser(){
             userImage.src = data.results[0].picture.large;
         })
 }
+
+function myRandomUser(){
+    fetch("/api/users/randomuser")
+
+        .then(res => res.json())
+        .then(data => {
+            var userName = document.getElementById("user-name");
+            var userGender = document.getElementById("user-gender");
+            var userImage = document.getElementById("user-image");
+
+            userName.innerHTML = data.name;
+            userGender.innerHTML = data.gender;
+            userImage.src = data.image;
+        })
+}
